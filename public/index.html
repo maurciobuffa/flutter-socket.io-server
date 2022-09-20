@@ -22,8 +22,11 @@
       socket.emit("message", {
         name: "Mauricio",
       });
-      socket.on("message", (message) => {
+      socket.on("new-message", (message) => {
         console.log(message);
+      });
+      socket.on("active-bands", (activeBands) => {
+        console.log(activeBands);
       });
     </script>
   </body>
